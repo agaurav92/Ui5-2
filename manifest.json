@@ -1,0 +1,194 @@
+{
+    "_version": "1.12.0",
+    "sap.app": {
+        "id": "FIM.COSTCENTER.CostCenter",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "sourceTemplate": {
+            "id": "servicecatalog.connectivityComponentForManifest",
+            "version": "0.0.0"
+        },
+        "dataSources": {
+            "ZFI_FIM_VALUEHELP_SRV": {
+                "uri": "/sap/opu/odata/sap/ZFI_FIM_VALUEHELP_SRV/",
+                "type": "OData",
+                "settings": {
+                    "localUri": "localService/metadata.xml"
+                }
+            },
+            "ZFI_FIM_COST_CENTER_SRV": {
+                "uri": "/sap/opu/odata/sap/ZFI_FIM_COST_CENTER_SRV/",
+                "type": "OData",
+                "settings": {
+                    "localUri": "localService/ZFI_FIM_COST_CENTER_SRV/metadata.xml"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": false,
+        "rootView": {
+            "viewName": "FIM.COSTCENTER.CostCenter.view.LandingScreen",
+            "type": "XML",
+            "async": true,
+            "id": "View1"
+        },
+        "dependencies": {
+            "minUI5Version": "1.65.6",
+            "libs": {
+                "sap.ui.layout": {},
+                "sap.ui.core": {},
+                "sap.m": {},
+                "sap.f": {},
+                "sap.uxap": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "FIM.COSTCENTER.CostCenter.i18n.i18n"
+                }
+            },
+            "ValuehelpModel": {
+                "type": "sap.ui.model.odata.v2.ODataModel",
+                "settings": {
+                    "defaultOperationMode": "Server",
+                    "defaultBindingMode": "OneWay",
+                    "defaultCountMode": "Request"
+                },
+                "dataSource": "ZFI_FIM_VALUEHELP_SRV",
+                "preload": true
+            },
+            "CostCenterModel": {
+                "type": "sap.ui.model.odata.v2.ODataModel",
+                "settings": {
+                    "defaultOperationMode": "Server",
+                    "defaultBindingMode": "OneWay",
+                    "defaultCountMode": "Request"
+                },
+                "dataSource": "ZFI_FIM_COST_CENTER_SRV",
+                "preload": true
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.f.routing.Router",
+                "type": "View",
+                "viewType": "XML",
+                "path": "FIM.COSTCENTER.CostCenter.view",
+                "controlId": "flexibleColumnLayout",
+                "transition": "slide",
+                "async": true
+            },
+            "routes": [
+                {
+                    "pattern": ":layout:",
+                    "name": "request",
+                    "target": [
+                        "request",
+                        "subrequest"
+                    ]
+                },
+                {
+                    "pattern": "subrequest/{layout}/{request}",
+                    "name": "subrequest",
+                    "target": [
+                        "request",
+                        "subrequest"
+                    ]
+                },
+                {
+                    "name": "RouteCCCreate",
+                    "pattern": "RouteCCCreate/{layout}/{SelectItem}/{request}/{SubReq}",
+                    "layout": "EndColumnFullScreen",
+                    "titleTarget": "",
+                    "target": [
+                        "CCCreate"
+                    ]
+                },
+                {
+                    "name": "RouteCCModify",
+                    "pattern": "RouteCCModify/{layout}/{SelectItem}/{request}/{SubReq}",
+                    "layout": "EndColumnFullScreen",
+                    "titleTarget": "",
+                    "target": [
+                        "CCModify"
+                    ]
+                },
+                {
+                    "name": "RouteCCCancel",
+                    "pattern": "RouteCCCancel/{layout}/{SelectItem}/{request}/{SubReq}",
+                    "layout": "EndColumnFullScreen",
+                    "titleTarget": "",
+                    "target": [
+                        "CCCancel"
+                    ]
+                }
+            ],
+            "targets": {
+                "request": {
+                    "name": "Request",
+                    "viewName": "Request",
+                    "controlAggregation": "beginColumnPages"
+                },
+                "subrequest": {
+                    "name": "Subrequest",
+                    "viewName": "Subrequest",
+                    "controlAggregation": "midColumnPages"
+                },
+                "CCCreate": {
+                    "name": "CCCreate",
+                    "viewName": "CCCreate",
+                    "controlAggregation": "endColumnPages"
+                },
+                "CCModify": {
+                    "name": "CCModify",
+                    "viewName": "CCModify",
+                    "controlAggregation": "endColumnPages"
+                },
+                "CCCancel": {
+                    "name": "CCCancel",
+                    "viewName": "CCCancel",
+                    "controlAggregation": "endColumnPages"
+                }
+            }
+        }
+    },
+    "sap.platform.abap": {
+        "uri": "/sap/bc/ui5_ui5/sap/z_fim_cost",
+        "_version": "1.1.0"
+    }
+}

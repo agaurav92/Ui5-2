@@ -1,0 +1,250 @@
+{
+    "resources": [
+        {
+            "name": "localService/metadata.xml"
+        },
+        {
+            "name": "localService/ZFI_FIM_COST_CENTER_SRV/metadata.xml"
+        },
+        {
+            "name": "Util/Utility.js"
+        },
+        {
+            "name": "Util/OdataHelper.js"
+        },
+        {
+            "name": "Util/Constants.js"
+        },
+        {
+            "name": "Util/Constants-dbg.js"
+        },
+        {
+            "name": "Util/Utility-dbg.js"
+        },
+        {
+            "name": "Util/OdataHelper-dbg.js"
+        },
+        {
+            "name": "resources.json",
+            "merged": true
+        },
+        {
+            "name": "controller/CCCancel.controller.js"
+        },
+        {
+            "name": "controller/block.controller.js"
+        },
+        {
+            "name": "controller/LandingScreen.controller.js"
+        },
+        {
+            "name": "controller/BaseController-dbg.js"
+        },
+        {
+            "name": "controller/Request.controller.js"
+        },
+        {
+            "name": "controller/block-dbg.controller.js"
+        },
+        {
+            "name": "controller/BaseController.js"
+        },
+        {
+            "name": "controller/Subrequest.controller.js"
+        },
+        {
+            "name": "controller/LandingScreen-dbg.controller.js"
+        },
+        {
+            "name": "controller/CCCancel-dbg.controller.js"
+        },
+        {
+            "name": "controller/Request-dbg.controller.js"
+        },
+        {
+            "name": "controller/CCModify-dbg.controller.js"
+        },
+        {
+            "name": "controller/CCCreate.controller.js"
+        },
+        {
+            "name": "controller/CCModify.controller.js"
+        },
+        {
+            "name": "controller/CCCreate-dbg.controller.js"
+        },
+        {
+            "name": "controller/Subrequest-dbg.controller.js"
+        },
+        {
+            "name": "index.html"
+        },
+        {
+            "name": "serviceBinding-dbg.js"
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "resources/sap-ui-version.json"
+        },
+        {
+            "name": "di.code-validation.core_issues.json"
+        },
+        {
+            "name": "serviceBinding.js"
+        },
+        {
+            "name": "i18n/messageBundle.properties",
+            "raw": "messageBundle.properties"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/messageBundle_fr.properties",
+            "raw": "messageBundle.properties"
+        },
+        {
+            "name": "i18n/i18n_fr.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "extended_runnable_file.html"
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "manifest-bundle.zip"
+        },
+        {
+            "name": ".project.json"
+        },
+        {
+            "name": "neo-app.json"
+        },
+        {
+            "name": "Component-dbg.js"
+        },
+        {
+            "name": "model/models.js"
+        },
+        {
+            "name": "model/models-dbg.js"
+        },
+        {
+            "name": "view/Request.view.xml"
+        },
+        {
+            "name": "view/CCCancel.view.xml"
+        },
+        {
+            "name": "view/fragment/CreateRequest.fragment.xml"
+        },
+        {
+            "name": "view/fragment/CreateSubrequest.fragment.xml"
+        },
+        {
+            "name": "view/fragment/SearchCostCenter.fragment.xml"
+        },
+        {
+            "name": "view/block.view.xml"
+        },
+        {
+            "name": "view/LandingScreen.view.xml"
+        },
+        {
+            "name": "view/CCCreate.view.xml"
+        },
+        {
+            "name": "view/Subrequest.view.xml"
+        },
+        {
+            "name": "view/CCModify.view.xml"
+        },
+        {
+            "name": "css/style.css"
+        },
+        {
+            "name": "test/testsuite.qunit-dbg.js"
+        },
+        {
+            "name": "test/unit/AllTests-dbg.js"
+        },
+        {
+            "name": "test/unit/unitTests.qunit-dbg.js"
+        },
+        {
+            "name": "test/unit/unitTests.qunit.html"
+        },
+        {
+            "name": "test/unit/AllTests.js"
+        },
+        {
+            "name": "test/unit/unitTests.qunit.js"
+        },
+        {
+            "name": "test/unit/controller/View1-dbg.controller.js"
+        },
+        {
+            "name": "test/unit/controller/View1.controller.js"
+        },
+        {
+            "name": "test/unit/controller/block.controller.js"
+        },
+        {
+            "name": "test/unit/controller/block-dbg.controller.js"
+        },
+        {
+            "name": "test/testsuite.qunit.js"
+        },
+        {
+            "name": "test/integration/arrangements/Startup-dbg.js"
+        },
+        {
+            "name": "test/integration/arrangements/Startup.js"
+        },
+        {
+            "name": "test/integration/NavigationJourney-dbg.js"
+        },
+        {
+            "name": "test/integration/opaTests.qunit-dbg.js"
+        },
+        {
+            "name": "test/integration/opaTests.qunit.html"
+        },
+        {
+            "name": "test/integration/NavigationJourney.js"
+        },
+        {
+            "name": "test/integration/opaTests.qunit.js"
+        },
+        {
+            "name": "test/integration/pages/View1-dbg.js"
+        },
+        {
+            "name": "test/integration/pages/View1.js"
+        },
+        {
+            "name": "test/integration/pages/block.js"
+        },
+        {
+            "name": "test/integration/pages/block-dbg.js"
+        },
+        {
+            "name": "test/integration/AllJourneys.js"
+        },
+        {
+            "name": "test/integration/AllJourneys-dbg.js"
+        },
+        {
+            "name": "test/testsuite.qunit.html"
+        },
+        {
+            "name": "manifest.json"
+        }
+    ]
+}

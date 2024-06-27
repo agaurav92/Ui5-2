@@ -1,0 +1,1 @@
+function initModel(){var a="/sap/opu/odata/sap/ZFI_FIM_COST_CENTER_SRV/";var e=new sap.ui.model.odata.ODataModel(a,true);sap.ui.getCore().setModel(e)}
